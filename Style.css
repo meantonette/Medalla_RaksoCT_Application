@@ -1,0 +1,583 @@
+body {
+    font-family: "Arial", "Impact", "Helvetica Neue Black", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+a {
+	text-decoration: none;
+}
+
+.et-hero-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-image: url('./media/Frontpage background.gif');
+    background-size: cover; /* Adjusts the background image to cover the entire section */
+    background-repeat: no-repeat; /* Ensures the background image does not repeat */
+    background-position: center; /* Centers the background image */
+    text-align: center;
+    padding: 0 2em;
+
+	.logo-container {
+        text-align: center;
+        margin-bottom: -40px;
+        margin-top: -60px;
+    }
+    
+    .logo-circle, .logo-name {
+        display: block;
+        margin: 0 auto; 
+        
+    }
+
+    .logo-circle {
+        width: 220px;
+        height: auto;
+        margin-bottom: -40px;
+    }
+    
+    .logo-name {
+        width: 320px;
+        height: auto;
+    }
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .brand-tagline{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+} */
+
+.et-slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+	background: #eee;
+	text-align: center;
+	padding: 0 2em;
+	h1 {
+		font-size: 2rem;
+		margin: 0;
+		letter-spacing: 1rem;
+	}
+	h3 {
+		font-size: 1rem;
+		letter-spacing: 0.3rem;
+		opacity: 0.6;
+	}
+}
+
+.et-hero-tabs-container {
+	display: flex;
+	flex-direction: row;
+    position: absolute;
+    transition: top 0.3s;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	background: #054f9e;
+	z-index: 10;
+	&--top {
+		position: fixed;
+		top: 0;
+	}
+}
+
+.et-hero-tabs-container--top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #054f9e; 
+}
+
+.et-hero-tab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	color: white;
+	letter-spacing: 0.1rem;
+	transition: all 0.5s ease;
+	font-size: 0.8rem;
+	&:hover {
+		color: black;
+		background: #ff6700;
+		transition: all 0.5s ease;
+        text-decoration: none;
+	}
+}
+
+.et-hero-tab-slider {
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 6px;
+	background: #ff6700;
+	transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+	.et-hero-tabs,
+	.et-slide {
+		h1 {
+			font-size: 3rem;
+		}
+		h3 {
+			font-size: 1rem;
+		}
+	}
+	.et-hero-tab {
+		font-size: 1rem;
+	}
+}
+
+.aboutus {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 150px;
+}
+
+  .aboutus-content {
+    flex: 1; /* Text takes up available space */
+    text-align: left;
+    padding-right: 20px; /* Space between text and image */
+    float: left;
+  width: 50%;
+  }
+
+  .aboutus span {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-style: bold;
+  }
+
+  .aboutus h3 {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .aboutus-media {
+    /* The media container (can hold image or video) */
+    width: 40%; /* Or a specific pixel width if needed */
+    /* You can also use flex-basis for more advanced control */
+    float: left;
+  width: 50%;
+  }
+
+  .aboutus-media img, .aboutus-media video {
+    max-width: 100%; /* Image/video scales within container */
+    height: auto;
+    display: block; /* Prevents potential spacing issues */
+  }
+
+
+  .row {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow columns to wrap to the next line */
+    width: 100%; /* Ensure row takes full width of parent */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-WWD {
+    flex: 1 0 50%; /* Each column takes 50% width */
+    padding: 20px; /* Add padding around content */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Remove the fixed height from the column */
+.column-WWD h2 {
+    /* Add any specific styling for h2 if needed */
+}
+
+.et-slide h1 { /* Corrected selector for h1 within .et-slide */
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1rem;
+}
+
+.et-slide h3 { /* Corrected selector for h3 within .et-slide */
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container__image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-color: #054f9e;
+  border-width: 50px;
+  background-size: cover;
+  transition: ease-in-out .3s;
+  z-index: 2;
+}
+
+.container__image:before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: inherit;
+  background-position: bottom;
+  filter: blur(40px) saturate(0%);
+  transform: scaleX(0.4);
+  transition: ease-in-out .4s;
+  border-radius: 120px;
+  transform-origin: right;
+  opacity: 0;
+  z-index: -1;
+}
+
+.container__info {
+  position: relative;
+  transition: ease-in-out .3s;
+  opacity: 0;
+}
+
+.container__description {
+  transition-delay: .15s;
+  position: relative;
+  width: fit-content;
+}
+
+.container__image:hover {
+  border-radius: 0;
+  width: 400px;
+  height: 260px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
+}
+
+.container__image:hover:before {
+  width: 100%;
+  opacity: 0.18;
+  filter: blur(10px) saturate(100%);
+  transform: scale(2.8) translate3d(-18%, 0px, 0px);
+}
+
+.container__image:hover .container__info {
+  transform: translate3d(-60%, 0px, 0px);
+  opacity: 1;
+}
+
+.link {
+  border-bottom: 1px solid transparent;
+  color: #06C0A8;
+  text-decoration: none;
+  transition: ease-in .13s;
+}
+
+.link:hover {
+  background-color: #06C0A8;
+  color: #ffffff;
+}
+
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+
+   .overlay {
+    background-image: linear-gradient(to right, rgba(36, 46, 183, 0.9), rgba(42, 54, 187, 0.9));
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 110px 0;
+}
+.section-bg {
+    background-size: cover;
+    position: relative;
+    background-position: left;
+    z-index: 0;
+    padding: 0;
+    min-height: auto;
+    overflow: hidden;
+}
+.contact-form {
+    position: relative;
+    padding: 45px 0 45px 60px;
+}
+
+.contact-form:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: 10px 40px 40px rgba(0,0,0,.2);
+    pointer-events: none;
+    right: auto;
+    width: 100vw;
+}
+.particles-js-canvas-el {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.contact-form input {
+    border: 0;
+    background: transparent;
+
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 11px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: .3s ease-in-out;
+    border: 2px solid transparent;
+    border-bottom-color: rgba(0,0,0,.1);
+}
+
+.contact-form textarea {
+    border: 0;
+    background: transparent;
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 11px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: .3s ease-in-out;
+    border: 2px solid transparent;
+    border-bottom-color: rgba(0,0,0,.1);
+}
+.contact-form input::placeholder {
+  color:#222;
+}
+.contact-form textarea::placeholder {
+  color:#222;
+
+}
+.contact-form input {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 55px;
+}
+.contact-form input:hover, .contact-form input:focus{
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    border: 2px solid transparent;
+    border-bottom-color: rgb(254, 132, 111);
+
+}
+.contact-form textarea:hover, .contact-form textarea:focus{
+  background: transparent; 
+    outline: none;
+  box-shadow: none;
+     border: 2px solid transparent;
+    border-bottom-color: rgb(254, 132, 111);
+
+}
+
+
+.taso-btn {
+    background-color: #fff;
+    margin: 25px 0;
+    color: #1744c0;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.32);
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.17);
+}
+.contact-info {
+    padding: 0 30px 0px 0;
+}
+
+h2.contact-title {
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    color: #ececec;
+}
+
+ul.contact-info {
+    margin-top: 30px;
+}
+
+ul.contact-info li {
+    margin-bottom: 22px;
+}
+
+
+
+ul.contact-info span {
+    font-size: 20px;
+    line-height: 26px;
+}
+ul.contact-info li {
+    display: flex;
+    width: 100%;
+}
+
+.info-left {
+    width: 10%;
+}
+
+.info-left i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.info-right h4 {
+    color: #fff;
+    font-size: 18px;
+}
+.contact-page .info-left i{
+color: #FE846F;
+}
+.btn {
+display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 30px 10px;
+    font-size: 17px;
+    line-height: 28px;
+    border: 0px;
+    border-radius: 10px;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.btn-big {
+    color: #ffffff;
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(45, 45, 45, 0.47843137254901963);
+    box-shadow: 2px 5px 10px 0px rgba(45, 45, 45, 0.19);
+    color: #fff !important;
+    margin-right: 20px;
+    background: #FE846F;
+    transition: .2s;
+    border: 2px solid #FE846F;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+.contact-form {
+    padding: 30px;
+}
+.contact-form:before {
+    width: 100%;
+}
+
+}
